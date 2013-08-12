@@ -4,7 +4,8 @@ Changelog
 1.4 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Fixed "show/hide all" option. There was a conflict with jquery.
+  [rristow]
 
 
 1.3 (2013-07-22)
@@ -26,9 +27,6 @@ Changelog
   [tom_gross]
 
 - Added local copy of the images that are deprecated in Plone
-  [rristow]
-
-- Fixed "show/hide all" option. There was a conflict with jquery.
   [rristow]
 
 
