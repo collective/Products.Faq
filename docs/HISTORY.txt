@@ -28,6 +28,10 @@ Changelog
 - Added local copy of the images that are deprecated in Plone
   [rristow]
 
+- Fixed "show/hide all" option. There was a conflict with jquery.
+  [rristow]
+
+
 1.2 (2012-04-11)
 ----------------
 

@@ -12,8 +12,8 @@
 <metal:javascriptslot fill-slot="javascript_head_slot">
 <script type="text/javascript" language="JavaScript">
 <!--
-  displayAll = 0;
-  items = 0;
+  faq_displayAll = 0;
+  faq_items = 0;
 
   function toggle(id) {
     el = document.getElementById("faq_" + id);
@@ -29,12 +29,12 @@
     }
   }
 
-  function toggle_all(items) {
-    for(var i = 1; i <= items; i++) {
+  function toggle_all(faq_items) {
+    for(var i = 1; i <= faq_items; i++) {
       el = document.getElementById("faq_" + i);
       icon = document.getElementById("icon_" + i);
       if (el) {
-         if (displayAll) {
+         if (faq_displayAll) {
             el.style.display = "none";
             icon.src = "treeCollapsed.gif";
          } else {
@@ -43,7 +43,7 @@
          }
       }
     }
-    displayAll = (displayAll ? 0 : 1);
+    faq_displayAll = (faq_displayAll ? 0 : 1);
   }
 
   function overLinkStyle(link_id) {
@@ -95,7 +95,7 @@
                       items python:len(faqs);
                       DateTime python:modules['DateTime'].DateTime;
                       datenow python: DateTime();">
-     <button class="context" i18n:translate="toggle_all" onclick="toggle_all(items)" tal:attributes="onclick python:'toggle_all(%s)' % items">Show/Hide all</button>
+     <button class="context" i18n:translate="toggle_all" onclick="toggle_all(faq_items)" tal:attributes="onclick python:'toggle_all(%s)' % items">Show/Hide all</button>
      <dl>
          <tal:entries repeat="entry python:[brain.getObject() for brain in faqs]">
             <dt tal:define="md python:DateTime(entry.ModificationDate());
@@ -142,7 +142,7 @@
           </tal:entries>
      </dl>
      </div>
-    <script type="text/javascript" tal:content="string:items=${items};"></script>
+    <script type="text/javascript" tal:content="string:faq_items=${items};"></script>
     </tal:faq>
         <div tal:replace="structure provider:plone.belowcontentbody" />
     </tal:main-macro>
