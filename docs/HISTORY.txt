@@ -4,7 +4,8 @@ Changelog
 1.4 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Fixed variable name if faqfolder_view.
+  [tom_gross
 
 
 1.3.1 (2013-08-12)
