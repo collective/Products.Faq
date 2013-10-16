@@ -4,7 +4,11 @@ Products.Faq README
 
 .. contents::
 
-.. image:: https://travis-ci.org/collective/Products.Faq.png
+.. image:: https://secure.travis-ci.org/collective/Products.Faq.png?branch=master
+    :target: http://travis-ci.org/collective/Products.Faq
+
+.. image:: https://coveralls.io/repos/collective/Products.Faq/badge.png?branch=master
+    :target: https://coveralls.io/r/collective/Products.Faq
 
 Introduction
 ============
