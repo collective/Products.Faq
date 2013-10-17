@@ -30,20 +30,9 @@
   }
 
   function toggle_all(faq_items) {
-    for(var i = 1; i <= faq_items; i++) {
-      el = document.getElementById("faq_" + i);
-      icon = document.getElementById("icon_" + i);
-      if (el) {
-         if (faq_displayAll) {
-            el.style.display = "none";
-            icon.src = "treeCollapsed.gif";
-         } else {
-            el.style.display = "block";
-            icon.src = "treeExpanded.gif";
-         }
-      }
-    }
-    faq_displayAll = (faq_displayAll ? 0 : 1);
+  
+    $('.faq_answer').toggle();
+
   }
 
   function overLinkStyle(link_id) {
@@ -126,20 +115,26 @@
        <tal:entries repeat="subentry subentries">
          <dt tal:define="md python:DateTime(subentry.ModificationDate());
                          delay here/delay;
-                         item repeat/subentry/index">
+                         it repeat/subentry/index;
+                         item python:int(it)">
+   
            <img i18n:attributes="title showhide_answer" title="Show or Hide answer"
-                tal:attributes="id string:icon_${item};
-                                onclick string:javascript:toggle('${item}');
+                tal:attributes="id string:icon_${item}_${subentry/aq_parent/id};
+                                onclick string:javascript:toggle('${item}_${subentry/Title}');
                                 src string:${portal_url}/treeCollapsed.gif;
-                                onmouseover string:javascript:overLinkStyle('icon_${item}');
-                                onmouseout string:javascript:outLinkStyle('icon_${item}')" />
+                                onmouseover string:javascript:overLinkStyle('icon_${item}_${subentry/aq_parent/id}');
+                                onmouseout string:javascript:outLinkStyle('icon_${item}')_${subentry/aq_parent/id}" />
            <img alt="Icon new" src=""
                 tal:attributes="src string:$portal_url/new.gif"
                 tal:condition="python: (md + delay).toZone('GMT+2').greaterThan(datenow)"/>
-            <a href="#" tal:content="subentry/Title" tal:attributes="href string:javascript:toggle('${item}');">Title</a>
+            <a href="#" tal:content="subentry/Title" tal:attributes="href string:javascript:toggle('${item}_${subentry/aq_parent/id}');">Title</a>
          </dt>
+
          <dd class="faq_question" tal:content="subentry/Description">Question</dd>
-         <dd class="faq_answer" tal:attributes="id python:'faq_%s' % repeat['subentry'].index" tal:content="structure subentry/getAnswer" tal:on-error="nothing">Answer</dd>
+
+         <dd tal:define="it repeat/subentry/index;
+                         itemr python:int(it)" class="faq_answer" tal:attributes="id string:faq_${itemr}_${subentry/aq_parent/id}" tal:content="structure subentry/getAnswer" tal:on-error="nothing">Answer</dd>
+
        </tal:entries>
      </dl>
      </div>

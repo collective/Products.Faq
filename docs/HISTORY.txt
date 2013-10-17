@@ -4,7 +4,7 @@ Changelog
 1.4 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- fix id's so faq works fine with subfolders [tamosauskas]
 
 
 1.3.2 (2013-08-26)
