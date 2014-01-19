@@ -110,7 +110,7 @@
                        onmouseout string:javascript:outLinkStyle('icon_${repeat/entry/number}')" />
             <img i18n:attributes="alt new; title new" class="new" alt="New" title="New" src="" tal:attributes="src string:$portal_url/new.gif"
                  tal:condition="python: (md + delay).toZone('GMT+2').greaterThan(datenow)"/>
-          <a href="#" tal:content="entry/Title" tal:attributes="href string:javascript:toggle('${repeat/entry/number}');">Title</a>
+          <a class="faq_shortquestion" href="#" tal:content="entry/Title" tal:attributes="href string:javascript:toggle('${repeat/entry/number}');">Title</a>
         </dt>
         <dd class="faq_question" tal:content="entry/Description">Question</dd>
         <dd class="faq_answer" tal:attributes="id string:faq_${repeat/entry/number}" tal:content="structure entry/getAnswer">Answer</dd>
@@ -139,7 +139,7 @@
            <img alt="Icon new" src=""
                 tal:attributes="src string:$portal_url/new.gif"
                 tal:condition="python: (md + delay).toZone('GMT+2').greaterThan(datenow)"/>
-            <a href="#" tal:content="subentry/Title" tal:attributes="href string:javascript:toggle('${item}_${subentry/aq_parent/id}');">Title</a>
+            <a class="faq_shortquestion" href="#" tal:content="subentry/Title" tal:attributes="href string:javascript:toggle('${item}_${subentry/aq_parent/id}');">Title</a>
          </dt>
 
          <dd class="faq_question" tal:content="subentry/Description">Question</dd>
