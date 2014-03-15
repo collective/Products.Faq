@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-04-05 10:23+0000\n"
+"POT-Creation-Date: 2014-03-15 11:27+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: Andrea Cecchi <andrea.cecchi@redturtle.it>\n"
 "Language-Team: RedTurtle Technology <sviluppoplone@redturtle.it>\n"
@@ -80,17 +80,27 @@ msgid "label_question"
 msgstr "Domanda"
 
 #. Default: "New"
-#: ./skins/faq/faqfolder_view.pt:109
+#: ./skins/faq/faqfolder_view.pt:173
 msgid "new"
 msgstr "Nuova"
 
 #. Default: "Show or Hide answer"
-#: ./skins/faq/faqfolder_view.pt:101
+#: ./skins/faq/faqfolder_view.pt:166
 msgid "showhide_answer"
 msgstr "Mostra o nascondi le riposte"
 
-#. Default: "Show/Hide all"
-#: ./skins/faq/faqfolder_view.pt:95
+#. Default: "Show or Hide Category"
+#: ./skins/faq/faqfolder_view.pt:186
+msgid "showhide_category"
+msgstr ""
+
+#. Default: "Show or Hide Answers"
+#: ./skins/faq/faqfolder_view.pt:161
 msgid "toggle_all"
 msgstr "Mostra/Nascondi tutte"
+
+#. Default: "Show or Hide Categories"
+#: ./skins/faq/faqfolder_view.pt:161
+msgid "toggle_categories"
+msgstr ""
 

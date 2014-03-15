@@ -1,14 +1,18 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Products.Faq\n"
-"POT-Creation-Date: 2012-04-05 10:23+0000\n"
+"POT-Creation-Date: 2014-03-15 11:27+0000\n"
 "PO-Revision-Date: 2012-04-05 09:04+0100\n"
 "Last-Translator: Tom Gross <thomasmichael.gross@fhnw.ch>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
 "Preferred-Encodings: utf-8 latin1\n"
+"Domain: DOMAIN\n"
 
 #. Default: "FAQ Folder"
 #: ./profiles/default/types/FaqFolder.xml
@@ -48,7 +52,7 @@ msgstr "Weitere Details der Frage, die nicht aus dem Titel hervorgehen."
 #. Default: "The description of the FAQ category."
 #: ./content/FaqFolder.py:27
 msgid "desc_folder"
-msgstr "Die Beschreibung der FAQ Kategorie."
+msgstr "Die Beschreibung der FAQ-Kategorie."
 
 #. Default: "The frequently asked question."
 #: ./content/FaqEntry.py:33
@@ -67,7 +71,7 @@ msgstr "Verzögerung"
 #. Default: "Detailed Question"
 #: ./content/FaqEntry.py:36
 msgid "label_detailed_question"
-msgstr "Detailierte Frage"
+msgstr "Detaillierte Frage"
 
 #. Default: "Description"
 #: ./content/FaqFolder.py:26
@@ -80,17 +84,27 @@ msgid "label_question"
 msgstr "Frage"
 
 #. Default: "New"
-#: ./skins/faq/faqfolder_view.pt:109
+#: ./skins/faq/faqfolder_view.pt:173
 msgid "new"
 msgstr "Neu"
 
 #. Default: "Show or Hide answer"
-#: ./skins/faq/faqfolder_view.pt:101
+#: ./skins/faq/faqfolder_view.pt:166
 msgid "showhide_answer"
-msgstr "Antwort zeigen oder verstecken"
+msgstr "Antwort zeigen/ausblenden"
 
-#. Default: "Show/Hide all"
-#: ./skins/faq/faqfolder_view.pt:95
+#. Default: "Show or Hide Category"
+#: ./skins/faq/faqfolder_view.pt:186
+msgid "showhide_category"
+msgstr "Kategorie zeigen/ausblenden"
+
+#. Default: "Show or Hide Answers"
+#: ./skins/faq/faqfolder_view.pt:161
 msgid "toggle_all"
-msgstr "Alles zeigen/verstecken"
+msgstr "Alle Antworten zeigen/ausblenden"
+
+#. Default: "Show or Hide Categories"
+#: ./skins/faq/faqfolder_view.pt:161
+msgid "toggle_categories"
+msgstr "Alle Kategorien zeigen/ausblenden"
 
